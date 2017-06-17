@@ -1,7 +1,7 @@
 # Basic Setup
 
 ### create root folder (name it whatever you like)
-all steps below should be done from root-folder unless explicitly said otherwise
+all steps below should be done from root-folder
 ### initialize git:
 ```
 git init
@@ -47,13 +47,13 @@ const babel = require('gulp-babel')
 const eslint = require('gulp-eslint')
 
 gulp.task('default', function () {
-  gulp.src(['es6/**/*.js', 'public/es6/**/*.js'])
+  gulp.src(['src/**/*.js', 'public/src/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
-  gulp.src('es6/**/*.js')
+  gulp.src('src/**/*.js')
     .pipe(babel())
     .pipe(gulp.dest('dist'))
-  gulp.src('public/es6/**/*.js')
+  gulp.src('public/src/**/*.js')
     .pipe(babel())
     .pipe(gulp.dest('public/dist'))
 })
@@ -72,7 +72,6 @@ And add the following content to it
 ### add gulp-babel
 ```
 npm i --seve-dev gulp-babel
-
 ```
 ### add ESLint
 ```
@@ -87,9 +86,9 @@ npm i --save-dev gulp-eslint
 ```
 ### create folder structure
 ```
-mkdir es6 && mkdir dist
+mkdir src && mkdir dist
 mkdir public && cd public
-mkdir es6 && mkdir dist
+mkdir src && mkdir dist
 cd ..
 ```
 
@@ -101,12 +100,12 @@ You should have the following structure
 ├── .gitignore
 ├── README.md
 ├── dist/
-├── es6/
+├── src/
 ├── gulpfile.js
 ├── node_modules/
 ├── package-lock.json
 ├── package.json
 └── public/
     ├── dist
-    └── es6
+    └── src
 ```

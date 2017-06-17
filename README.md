@@ -1,3 +1,5 @@
+# Basic Setup
+
 ### create root folder (name it whatever you like)
 all steps below should be done from root-folder unless explicitly said otherwise
 ### initialize git:
@@ -24,7 +26,7 @@ node_modules
 *~
 ```
 
-### add a readme files
+### add a readme file
 ```
 touch .README.md
 ```
@@ -32,23 +34,60 @@ touch .README.md
 ```
 npm init -y
 ```
-
-### add gulp as dev dependency
+### add gulp
 ```
 npm i --save-dev gulp
+
+touch gulpfile.js
 ```
 And add the following content to it:
 ```
 const gulp = require('gulp')
+const babel = require('gulp-babel')
+const eslint = require('gulp-eslint')
 
-gulp.task('default', function() {
-
+gulp.task('default', function () {
+  gulp.src(['es6/**/*.js', 'public/es6/**/*.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+  gulp.src('es6/**/*.js')
+    .pipe(babel())
+    .pipe(gulp.dest('dist'))
+  gulp.src('public/es6/**/*.js')
+    .pipe(babel())
+    .pipe(gulp.dest('public/dist'))
 })
 ```
+### add babel
+```
+npm i --save-dev babel-preset-es2015
 
+touch .babelrc
+```
+And add the following content to it
+```
+{ "presets": ["es2015"] }
+```
+
+### add gulp-babel
+```
+npm i --seve-dev gulp-babel
+
+```
+### add ESLint
+```
+touch .eslintrc
+eslint --init
+```
+And answer the questions
+
+### add gulp-eslint
+```
+npm i --save-dev gulp-eslint
+```
 ### create folder structure
 ```
-touch es6 && touch dist
+mkdir es6 && mkdir dist
 mkdir public && cd public
 mkdir es6 && mkdir dist
 cd ..
@@ -56,16 +95,18 @@ cd ..
 
 You should have the following structure
 ```
-├── .git
+├── .babelrc
+├── .eslintrc
+├── .git/
 ├── .gitignore
 ├── README.md
-├── dist
-├── es6
+├── dist/
+├── es6/
 ├── gulpfile.js
-├── node_modules [161 entries exceeds filelimit, not opening dir]
+├── node_modules/
 ├── package-lock.json
 ├── package.json
-└── public
+└── public/
     ├── dist
     └── es6
 ```

@@ -7,8 +7,9 @@
 npm i
 ```
 #### Write es6 code!
-* Code that should run in a node environment goes in the **src/** folder
-* Code that should run in a browser goes in the **public/src/** folder
+* Create a new folder or use the templates in **/src/template.js** or **/src/public/template.js** and write your es6 code.
+  * Code that should run in a node environment goes in the **src/** folder
+  * Code that should run in a browser goes in the **public/src/** folder
 
 * Turn the es6 you've written in to runnable code by typing 
 ```
@@ -16,6 +17,11 @@ gulp
 ```
 in the terminal. 
 The runnable code will be in the **dist** or **public/dist/** folder.
+
+* To run the code in a node environment type
+```
+node src/<the-name-of-your-file.js>
+```
 
 * To clean the dist folders run
 ```

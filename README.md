@@ -6,6 +6,20 @@
 ```
 npm i
 ```
+#### Write es6 code!
+* Code that should run in a node environment goes in the **src/** folder
+* Code that should run in a browser goes in the **public/src/** folder
+
+* Turn the es6 you've written in to runnable code by typing 
+```
+gulp
+```
+in the terminal The runnable code will be in the **dist** or **public/dist/** folder.
+
+* To clean the dist folders run
+```
+gulp clean
+```
 
 ## Clone this repo or follow the steps below
 

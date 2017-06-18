@@ -1,5 +1,7 @@
 # Basic Setup
 
+## Clone this repo or follow the steps below
+
 ### create root folder (name it whatever you like)
 all steps below should be done from root-folder
 ### initialize git:

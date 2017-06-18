@@ -14,14 +14,24 @@ npm i
 ```
 gulp
 ```
-in the terminal The runnable code will be in the **dist** or **public/dist/** folder.
+in the terminal. 
+The runnable code will be in the **dist** or **public/dist/** folder.
 
 * To clean the dist folders run
 ```
 gulp clean
 ```
+### Prerequisites
+* Node & Npm
+```
+brew install node
+```
+* Gulp
+```
+npm i -g gulp
+```
 
-## Clone this repo or follow the steps below
+## If you prefer to set this up by yourself, follow the instructions bellow
 
 ### create root folder (name it whatever you like)
 all steps below should be done from root-folder

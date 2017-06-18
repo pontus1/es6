@@ -1,6 +1,9 @@
 # es6-boilerplate
 * A boilerplate for es6 to run in node or in any browser
 
+## Getting Started
+* Clone the repo and run ==npm i==
+
 ## Clone this repo or follow the steps below
 
 ### create root folder (name it whatever you like)

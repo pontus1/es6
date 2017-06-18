@@ -1,4 +1,5 @@
-# Basic Setup
+# es6-boilerplate
+* A boilerplate for es6 to run in node or in any browser
 
 ## Clone this repo or follow the steps below
 
